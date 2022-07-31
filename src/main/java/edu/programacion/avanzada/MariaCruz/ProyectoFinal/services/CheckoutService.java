@@ -3,14 +3,14 @@ package edu.programacion.avanzada.MariaCruz.ProyectoFinal.services;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.domain.*;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.dto.CheckoutDTO;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.repositories.*;
-import edu.programacion.avanzada.aluismarte.project.domain.*;
+import edu.programacion.avanzada.MariaCruz.ProyectoFinal.domain.*;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.request.checkout.CheckoutAddProductRequest;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.request.checkout.CheckoutUpdateAddressRequest;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.request.checkout.CheckoutUpdatePaymentMethodRequest;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.request.checkout.PayCheckoutRequest;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.response.checkout.PayCheckoutResponse;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.patterns.command.CommandBus;
-import edu.programacion.avanzada.aluismarte.project.repositories.*;
+import edu.programacion.avanzada.MariaCruz.ProyectoFinal.repositories.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

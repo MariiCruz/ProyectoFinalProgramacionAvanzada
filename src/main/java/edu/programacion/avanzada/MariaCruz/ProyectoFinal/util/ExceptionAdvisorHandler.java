@@ -2,7 +2,7 @@ package edu.programacion.avanzada.MariaCruz.ProyectoFinal.util;
 
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.APIError;
 import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.exceptions.*;
-import edu.programacion.avanzada.aluismarte.project.model.exceptions.*;
+import edu.programacion.avanzada.MariaCruz.ProyectoFinal.model.exceptions.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
