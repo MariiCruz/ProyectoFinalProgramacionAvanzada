@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -32,28 +33,28 @@ public class PaymentMethodController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GetPaymentMethodResponse> get(@PathVariable Long id) {
+    public ResponseEntity<GetPaymentMethodResponse> get(@Valid @PathVariable Long id) {
         return ResponseEntity.ok(GetPaymentMethodResponse.builder()
                 .paymentMethods(List.of(paymentMethodService.get(id)))
                 .build());
     }
 
     @PostMapping
-    public ResponseEntity<CreatePaymentMethodResponse> create(@RequestBody CreatePaymentMethodRequest createPaymentMethodRequest) {
+    public ResponseEntity<CreatePaymentMethodResponse> create(@Valid @RequestBody CreatePaymentMethodRequest createPaymentMethodRequest) {
         return ResponseEntity.ok(CreatePaymentMethodResponse.builder()
                 .paymentMethod(paymentMethodService.create(createPaymentMethodRequest))
                 .build());
     }
 
     @PutMapping
-    public ResponseEntity<UpdatePaymentMethodResponse> update(@RequestBody UpdatePaymentMethodRequest updatePaymentMethodRequest) {
+    public ResponseEntity<UpdatePaymentMethodResponse> update(@Valid @RequestBody UpdatePaymentMethodRequest updatePaymentMethodRequest) {
         return ResponseEntity.ok(UpdatePaymentMethodResponse.builder()
                 .paymentMethod(paymentMethodService.update(updatePaymentMethodRequest))
                 .build());
     }
 
     @DeleteMapping
-    public ResponseEntity<DeletePaymentMethodResponse> delete(@RequestBody DeletePaymentMethodRequest deleteEmployeeRequest) {
+    public ResponseEntity<DeletePaymentMethodResponse> delete(@Valid @RequestBody DeletePaymentMethodRequest deleteEmployeeRequest) {
         paymentMethodService.delete(deleteEmployeeRequest);
         return ResponseEntity.ok(DeletePaymentMethodResponse.builder().build());
     }

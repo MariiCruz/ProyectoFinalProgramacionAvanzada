@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
@@ -30,7 +31,7 @@ public class OrderController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<GetOrderResponse> get(@PathVariable UUID id) {
+    public ResponseEntity<GetOrderResponse> get( @PathVariable UUID id) {
         return ResponseEntity.ok(GetOrderResponse.builder()
                 .orders(List.of(orderService.get(id)))
                 .build());
